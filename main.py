@@ -7,7 +7,7 @@ from game import Game
 #iniciar pygame
 pygame.init()
 #iniciar display
-screen = pygame.display.set_mode((config.SCREEN_HEIGHT, config.SCREEN_WIDTH))
+screen = pygame.display.set_mode((config.SCREEN_WIDTH, config.SCREEN_HEIGHT))
 
 pygame.display.set_caption("Rpg-Python")
 

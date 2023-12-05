@@ -17,13 +17,16 @@ class Game:
     print("configure")
     self.game_state= GameState.RUNNING
 
+    self.load_map("01")
+
    
-    
+  
   def update(self):
     self.screen.fill(config.BLACK)
     print("atualizando")
     self.handle_events()
 
+    self.render_map(self.screen)
     
 
     for object in self.objects:
@@ -38,7 +41,7 @@ class Game:
         if event.key == pygame.K_ESCAPE:
           self.game_state= GameState.ENDED
         elif event.key == pygame.K_w:
-          self.player.update_position(0,-10) 
+          self.player.update_position(0,-1) 
         elif event.key == pygame.K_s:
           self.player.update_position(0,1)
         elif event.key == pygame.K_a:
@@ -46,7 +49,35 @@ class Game:
         elif event.key == pygame.K_d:
           self.player.update_position(1,0)
 
+  def load_map(self,file_name):
+    with open ('maps/'+file_name+".txt") as map_file:
+      for line in map_file:
+        tiles = []
+
+        for i in range(0,len(line)-1,2):
+          tiles.append(line[i])
+        self.map.append(tiles)
+      print(self.map)   
+          
+  def render_map(self,screen):
+    y_pos = 0
+    for line in self.map:
+      x_pos = 0
+      for tile in line:
+          image = map_tile_image [tile]
+          rect = pygame.Rect(x_pos * config.SCALE, y_pos * config.SCALE, config.SCALE, config.SCALE)
+          screen.blit(image,rect)
+          x_pos = x_pos + 1
+        
+      y_pos = y_pos + 1
+    
+
+map_tile_image = {
+  "G":pygame.transform.scale(pygame.image.load("imgs/grass1.png") , (config.SCALE,config.SCALE)),
+"W":pygame.transform.scale(pygame.image.load("imgs/grass2.png") , (config.SCALE,config.SCALE))
+}
+    
+
 
 
      
-

@@ -74,7 +74,24 @@ class Game:
 
 map_tile_image = {
   "G":pygame.transform.scale(pygame.image.load("imgs/grass1.png") , (config.SCALE,config.SCALE)),
-"W":pygame.transform.scale(pygame.image.load("imgs/grass2.png") , (config.SCALE,config.SCALE))
+"W":pygame.transform.scale(pygame.image.load("imgs/grass2.png") , (config.SCALE,config.SCALE)),
+"J":pygame.transform.scale(pygame.image.load("imgs/grass3.png") , (config.SCALE,config.SCALE)),
+  "K":pygame.transform.scale(pygame.image.load("imgs/grass4.png") , (config.SCALE,config.SCALE)),
+  "L":pygame.transform.scale(pygame.image.load("imgs/grass5.png") , (config.SCALE,config.SCALE)),
+  "Z":pygame.transform.scale(pygame.image.load("imgs/grass6.png") , (config.SCALE,config.SCALE)),
+  "X":pygame.transform.scale(pygame.image.load("imgs/grass7.png") , (config.SCALE,config.SCALE)),
+  "C":pygame.transform.scale(pygame.image.load("imgs/grass8.png") , (config.SCALE,config.SCALE)),
+  "V":pygame.transform.scale(pygame.image.load("imgs/grass8.png") , (config.SCALE,config.SCALE)) , 
+  "B":pygame.transform.scale(pygame.image.load("imgs/grass10.png") , (config.SCALE,config.SCALE)),
+  "N":pygame.transform.scale(pygame.image.load("imgs/grass11.png") , (config.SCALE,config.SCALE)),
+  "M":pygame.transform.scale(pygame.image.load("imgs/grass12.png") , (config.SCALE,config.SCALE)),
+  "Q":pygame.transform.scale(pygame.image.load("imgs/grass13.png") , (config.SCALE,config.SCALE)),
+"R":pygame.transform.scale(pygame.image.load("imgs/grass14.png") , (config.SCALE,config.SCALE)),
+"E":pygame.transform.scale(pygame.image.load("imgs/grass15.png") , (config.SCALE,config.SCALE)),
+  "T":pygame.transform.scale(pygame.image.load("imgs/grass16.png") , (config.SCALE,config.SCALE)),
+  "Y":pygame.transform.scale(pygame.image.load("imgs/grass18.png") , (config.SCALE,config.SCALE)),
+  "U":pygame.transform.scale(pygame.image.load("imgs/grass17.png") , (config.SCALE,config.SCALE))
+  
 }
     
 
